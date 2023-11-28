@@ -1,4 +1,4 @@
-# EIF2B_CRC
+# EIF2B CRC - exploring transcriptional and translational changes upon modulation of eIF2B activity in colorectal cancer
 
 This repository contains the scripts used to analyse Riboseq and cytoplasmic RNA sequencing results associate with the manuscript "Sensing of p-eIF2alpha levels by the eIF2B complex is vital for colorectal cancer" (html here)
 Fastq files are deposited with the code (XXX) in the Gene Expression Omnibus
