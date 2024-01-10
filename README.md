@@ -7,32 +7,7 @@ The project utilizes codes developed primarily by Dr. Joseph Waldron at the Bush
 
 For running shell scripts, two conda environments are used: one for total cytoplasmic RNA analysis (scripts A_ and B_), and one for the RPF analysis (scripts C_, D_, E_).
 Conda environments are generated as per https://github.com/Bushell-lab/Ribo-seq description.
-For totals analysis, the RNAseq environment is created
-conda create --name RNAseq
-conda activate RNAseq
-conda install -c bioconda fastqc
-conda install -c bioconda cutadapt
-conda install -c bioconda umi_tools
-conda install -c bioconda rsem
-conda install -c bioconda samtools=1.9 --force-reinstall
-conda install -c bioconda bowtie2
-conda install tbb=2020.2
-conda install -c bioconda bbmap
-conda install -c anaconda biopython
-conda deactivate
-
-For RPF analysis, the RiboSeq environment is created
-conda create --name RiboSeq
-conda activate RiboSeq
-conda install -c bioconda fastqc
-conda install -c bioconda cutadapt
-conda install -c bioconda umi_tools
-conda install -c bioconda bbmap
-conda install -c bioconda samtools=1.9
-conda install -c bioconda pysam
-conda install -c anaconda biopython
-conda deactivate
-
+The environments can be replicated using the RNAseq_pkg_list.txt and RiboSeq_pkg_list.txt files in this repository.
 
 Please note that the current pipeline on the Bushell-lab is slightly different than the one used for this project.
 The main difference relies on the stage at which deduplication is performed - this pipeline performs deduplication on all data prior to alingment and removal of read for rRNA/tRNA/mitochondrial RNAs contaminants. The current pipeline at https://github.com/Bushell-lab/Ribo-seq runs deduplication after RNAs contaminats reads are removed.
