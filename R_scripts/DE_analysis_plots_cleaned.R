@@ -1,7 +1,9 @@
+# this script is used to make the scatter plots of RPF vs total RNA changes
+
 # load libraries
 library(tidyverse)
 library(viridis)
-#library(conflicted)
+library(conflicted)
 
 # themes----
 mytheme <- theme_classic()+
