@@ -1,6 +1,7 @@
 # VM path
-
 base_dir <- "~/data/CGIACOME/Protocols_and_Documentation/Sequencing/Gene_signatures/msigdb_v2023.1.Hs_GMTs/"
+# VPN path
+#base_dir <- "Volume/data-1/CGIACOME/Protocols_and_Documentation/Sequencing/Gene_signatures/msigdb_v2023.1.Hs_GMTs/"
 
 pathways.hallmark <- gmtPathways(paste0(base_dir, "h.all.v2023.1.Hs.symbols.gmt"))
 pathways.curated <- gmtPathways(paste0(base_dir, "c2.all.v2023.1.Hs.symbols.gmt"))
