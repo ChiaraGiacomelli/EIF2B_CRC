@@ -2,6 +2,9 @@
 # the script also includes lines to make volcano and MA plots (commented out)
 # as well as scatter plots with tigther thresholds in case one prefers more stringency
 
+# ATTENTION: Limits for scatter plots are arbitrarily chosen on the basis of the shEIF2B4 range
+# this is to aid the visual comparison of data when the two scatters are next to each other in the manuscript's figure
+
 # load libraries
 library(tidyverse)
 library(viridis)
