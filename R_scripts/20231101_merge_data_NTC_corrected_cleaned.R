@@ -1,7 +1,9 @@
-# get all my data in a single table - merging all normalised and all log2FC######
+# get all my data in a single table - merging all normalised and all log2FC
 # as the venn diagram had less numbers in some categories, I will try full_joins instead of left_joins
 # these data then goes into tables_dir and plot_dirs which are for publication
 # print in PDF for high resolution and vector graphics
+
+# version from 20231101
 
 library(tidyverse)
 library(tximport)
@@ -20,7 +22,6 @@ mytheme <- theme_minimal()+
         axis.text = element_text(size = 12),
         legend.title = element_text(size = 16),
         legend.text = element_text(size = 14))
-
 
 ## read in common variables & files ----
 source("common_variables.R")
