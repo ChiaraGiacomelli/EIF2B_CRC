@@ -1,7 +1,7 @@
 # EIF2B CRC - exploring transcriptional and translational changes upon modulation of eIF2B activity in colorectal cancer
 
-This repository contains the scripts used to analyse Riboseq and cytoplasmic RNA sequencing results associate with the manuscript "Maintenance of p-eIF2α levels by the eIF2B complex is vital for colorectal cancer" ([link to paper](https://doi.org/10.1038/s44318-025-00381-9))
-Fastq files are deposited with the code ([GSE249128](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249128)) in the Gene Expression Omnibus.
+This repository contains the scripts used to analyse Riboseq and cytoplasmic RNA sequencing results associate with the manuscript ["Maintenance of p-eIF2α levels by the eIF2B complex is vital for colorectal cancer"](https://doi.org/10.1038/s44318-025-00381-9)
+Fastq files are deposited with the code [GSE249128](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE249128) in the Gene Expression Omnibus.
 
 The project utilizes codes developed primarily by Dr. Joseph Waldron at the Bushell lab (Cancer Research UK Scotland Institute) and available on github at the main project branch https://github.com/Bushell-lab/Ribo-seq.
 
