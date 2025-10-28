@@ -1,9 +1,7 @@
 # GMT files using human NCBI symbols as identigiers downloaded from the 2023.1 MsigDB version
 
-# VM path
-base_dir <- "~/data/CGIACOME/Protocols_and_Documentation/Sequencing/Gene_signatures/msigdb_v2023.1.Hs_GMTs/"
-# VPN path
-#base_dir <- "/Volumes/data-1/CGIACOME/Protocols_and_Documentation/Sequencing/Gene_signatures/msigdb_v2023.1.Hs_GMTs/"
+base_dir <- "~/Gene_signatures/msigdb_v2023.1.Hs_GMTs/" # folder where you have your gmt files downloaded from MsigDB
+
 
 pathways.hallmark <- gmtPathways(paste0(base_dir, "h.all.v2023.1.Hs.symbols.gmt"))
 pathways.curated <- gmtPathways(paste0(base_dir, "c2.all.v2023.1.Hs.symbols.gmt"))
