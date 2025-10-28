@@ -26,9 +26,6 @@ mytheme <- theme_minimal()+
 source("common_variables.R")
 shRNAs <- c('2B1','2B4','2B5')
 
-# From Mac parent directory
-# parent_dir <- '/Volumes/data-1/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/AAA_Riboseq/Analysis/Ribo-seq-allreps'
-
 plot_dir <- paste0(parent_dir,"/plots/PDF_for_paper/")
 tables_dir <- paste0(parent_dir,"/Analysis/tables_for_paper")
 
