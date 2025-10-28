@@ -17,7 +17,7 @@ RPF_adaptor='TGGAATTCTCGGGTGCCAAGG' #this is the adaptor used in the nextflex sm
 Totals_adaptor='AGATCGGAAGAG' #this is the adaptor used in the LEXOGEN CORALL Total RNA-Seq Library Prep Kit
 
 ###paths
-parent_dir='/home/local/BICR/cgiacome/data/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/AAA_Riboseq/Analysis/Ribo-seq-allreps' #This is the path to the parent directory that contains all the data and where all the processed data will be saved
+parent_dir='/your/home/path' #This is the path to the parent directory that contains all the data and where all the processed data will be saved
 
 #The following directories are where all the processed data will be saved. These all need to be created prior to starting the analysis
 
@@ -62,7 +62,7 @@ read_counts_summary_dir=${plots_dir}/read_counts_summary
 binned_plots_dir=${plots_dir}/binned_plots
 
 #Fastas
-fasta_dir='/home/local/BICR/cgiacome/data/R11/bioinformatics_resources/FASTAs/human'
+fasta_dir='your/folder/with/FASTs'
 
 rRNA_fasta=${fasta_dir}/rRNA/human_rRNA.fa
 tRNA_fasta=${fasta_dir}/tRNA/human_mature_tRNA.fa
