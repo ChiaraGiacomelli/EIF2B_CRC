@@ -15,7 +15,7 @@ myTheme <- theme_classic()+
         plot.title = element_text(size = 18, face = "bold", hjust = 0.4))
 
 # load RSCU data list----
-load("~/data/R11/bioinformatics_resources/FASTAs/human/GENCODE/v38/transcript_info/gencode.v38.pc_transcripts_RSCU.Rdata")
+load("~/gencode.v38.pc_transcripts_RSCU.Rdata")
 
 #read in DESeq2 output----
 merged_DEseq_data <- read_csv(file = file.path(tables_dir, "20231101_RPFs_groups_for_ORA.csv"))
@@ -151,4 +151,5 @@ RPFs_down_2B4_summarised %>%
 pdf(file = paste0(plot_dir, "Suppl_5_RSCU/RPFs_down_vs_up_rscu_2B4_noLabel_exclusive.pdf"), width = 8, height = 7)
 print(RPFs_down_plot)
 dev.off()
+
 
