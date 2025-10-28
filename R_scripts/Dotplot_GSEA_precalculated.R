@@ -6,8 +6,7 @@ library(tidyverse)
 library(viridis)
 
 # folder with data and where to put plots
-#home <- 'N:/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/20230925_GSEA_data_transfer'
-home <- '~/data/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/20230925_GSEA_data_transfer'
+home <- 'folder/w/GSEA/results' # path to folder with GSEA results from Wuerzburg
 
 mytheme <- theme_classic()+
   theme(plot.title = element_text(size = 16, hjust = 0.5, face = "bold"),
