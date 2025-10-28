@@ -23,7 +23,7 @@ viridis_colors <- c("#000004","#2c115f", "#721f81", "#b73779","#f1605d", "#feb07
 # create a variable for what the treatment is----
 treatment <- "plus"
 
-parent_dir <- '~/data/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/AAA_Riboseq/Analysis/Ribo-seq-allreps'
+parent_dir <- 'your/home/folder' # where all data is stored, same parent_dir as used in the shell scripts
 plot_dir <- paste0(parent_dir,"/plots/PDF_for_paper/")
 tables_dir <- paste0(parent_dir,"/Analysis/Tables_for_paper/")
 
@@ -39,70 +39,6 @@ log2FC_thr = 0
 ## read in DESeq2 output----
 totals <- read_csv(file = file.path(tables_dir, paste0("Totals_", shRNA, "_NTCcorrected_DEseq2_apeglm_LFC_shrinkage.csv")))
 RPFs <- read_csv(file = file.path(tables_dir, paste0("RPFs_", shRNA, "_NTCcorrected_DEseq2_apeglm_LFC_shrinkage.csv")))
-
-# ## plot volcanos----
-# RPFs |>
-#   dplyr::filter(!(is.na(padj))) |>
-#   mutate(sig = factor(case_when(padj < padj_thr ~ "*",
-#                                 padj >= padj ~ "NS"))) |>
-#   ggplot(aes(x = log2FoldChange, y = -log10(padj), colour = sig))+
-#   geom_point(size=3,alpha = 0.5)+
-#   mytheme+
-#   xlab("log2FC")+
-#   ylab("-log10(padj)")+
-#   ggtitle(paste(shRNA, "RPFs"), subtitle = paste("p-value thr", padj_thr,"\nlog2FC thr +/-", log2FC_thr)) +
-#   geom_hline(yintercept = 1, linetype='dashed', linewidth=0.5)-> RPFs_volcano
-# 
-# pdf(file = paste0(plot_dir, "RPFs_", shRNA, "_NTCcorrected_volcano_fixedlimitswGrey.pdf"), width = 7, height = 7)
-# print(RPFs_volcano)
-# dev.off()
-# 
-# totals |>
-#   dplyr::filter(!(is.na(padj))) |>
-#   mutate(sig = factor(case_when(padj < padj_thr ~ "*",
-#                                 padj >= padj_thr ~ "NS"))) |>
-#   ggplot(aes(x = log2FoldChange, y = -log10(padj), colour = sig))+
-#   geom_point(size=3, alpha = 0.5)+
-#   mytheme+
-#   xlab("log2FC")+
-#   ylab("-log10(padj)")+
-#   ggtitle(paste(shRNA, "Totals"), subtitle = paste("p-value thr", padj_thr,"\nlog2FC thr +/-", log2FC_thr))+
-#   geom_hline(yintercept = 1, linetype='dashed', linewidth=0.5)-> totals_volcano
-# 
-# pdf(file = paste0(plot_dir, "Totals_", shRNA, "_NTCcorrected_volcano_fixedlimitswGrey.pdf"), width = 7, height = 7)
-# print(totals_volcano)
-# dev.off()
-# 
-# ## plot MAs----
-# RPFs |>
-#   dplyr::filter(!(is.na(padj))) |>
-#   mutate(sig = factor(case_when(padj < padj_thr ~ "*",
-#                                 padj >= padj_thr ~ "NS"))) |>
-#   ggplot(aes(x = log10(baseMean), y = log2FoldChange, colour = sig))+
-#   geom_point(alpha = 0.5)+
-#   mytheme+
-#   xlab("log10(mean expression)")+
-#   ylab("log2FC")+
-#   ggtitle(paste(shRNA, "RPFs"), subtitle = paste("p-value thr", padj_thr,"\nlog2FC thr +/-", log2FC_thr, "\napeglm shrinking")) -> RPFs_MA
-# 
-# pdf(file = paste0(plot_dir, paste0("RPFs_", shRNA, "_NTCcorrected_MA_fixedlimitswGrey.pdf")), width = 5, height = 5)
-# print(RPFs_MA)
-# dev.off()
-# 
-# totals |>
-#   dplyr::filter(!(is.na(padj))) |>
-#   mutate(sig = factor(case_when(padj < 0.01 ~ "*",
-#                                 padj >= 0.01 ~ "NS"))) |>
-#   ggplot(aes(x = log10(baseMean), y = log2FoldChange, colour = sig))+
-#   geom_point(alpha = 0.5)+
-#   mytheme+
-#   xlab("log10(mean expression)")+
-#   ylab("log2FC")+
-#   ggtitle(paste(shRNA, "Totals"), subtitle = paste("p-value thr", padj_thr,"\nlog2FC thr +/-", log2FC_thr, "\napeglm shrinking")) -> totals_MA
-# 
-# pdf(file = paste0(plot_dir, paste0("Totals_", shRNA, "_NTCcorrected_MA_fixedlimitswGrey.pdf")), width = 5, height = 5)
-# print(totals_MA)
-# dev.off()
 
 ## merge RPF with totals data----
 RPFs |>
@@ -223,70 +159,6 @@ log2FC_thr = 0
 ## read in DESeq2 output----
 totals <- read_csv(file = file.path(tables_dir, paste0("Totals_", shRNA, "_NTCcorrected_DEseq2_apeglm_LFC_shrinkage.csv")))
 RPFs <- read_csv(file = file.path(tables_dir, paste0("RPFs_", shRNA, "_NTCcorrected_DEseq2_apeglm_LFC_shrinkage.csv")))
-
-# ## plot volcanos----
-# RPFs |>
-#   dplyr::filter(!(is.na(padj))) |>
-#   mutate(sig = factor(case_when(padj < padj_thr ~ "*",
-#                                 padj >= padj ~ "NS"))) |>
-#   ggplot(aes(x = log2FoldChange, y = -log10(padj), colour = sig))+
-#   geom_point(size=3,alpha = 0.5)+
-#   mytheme+
-#   xlab("log2FC")+
-#   ylab("-log10(padj)")+
-#   ggtitle(paste(shRNA, "RPFs"), subtitle = paste("p-value thr", padj_thr,"\nlog2FC thr +/-", log2FC_thr)) +
-#   geom_hline(yintercept = 1, linetype='dashed', linewidth=0.5)-> RPFs_volcano
-# 
-# pdf(file = paste0(plot_dir, "RPFs_", shRNA, "_NTCcorrected_volcano_fixedlimitswGrey.pdf"), width = 7, height = 7)
-# print(RPFs_volcano)
-# dev.off()
-# 
-# totals |>
-#   dplyr::filter(!(is.na(padj))) |>
-#   mutate(sig = factor(case_when(padj < padj_thr ~ "*",
-#                                 padj >= padj_thr ~ "NS"))) |>
-#   ggplot(aes(x = log2FoldChange, y = -log10(padj), colour = sig))+
-#   geom_point(size=3, alpha = 0.5)+
-#   mytheme+
-#   xlab("log2FC")+
-#   ylab("-log10(padj)")+
-#   ggtitle(paste(shRNA, "Totals"), subtitle = paste("p-value thr", padj_thr,"\nlog2FC thr +/-", log2FC_thr))+
-#   geom_hline(yintercept = 1, linetype='dashed', linewidth=0.5)-> totals_volcano
-# 
-# pdf(file = paste0(plot_dir, "Totals_", shRNA, "_NTCcorrected_volcano_fixedlimitswGrey.pdf"), width = 7, height = 7)
-# print(totals_volcano)
-# dev.off()
-# 
-# ## plot MAs----
-# RPFs |>
-#   dplyr::filter(!(is.na(padj))) |>
-#   mutate(sig = factor(case_when(padj < padj_thr ~ "*",
-#                                 padj >= padj_thr ~ "NS"))) |>
-#   ggplot(aes(x = log10(baseMean), y = log2FoldChange, colour = sig))+
-#   geom_point(alpha = 0.5)+
-#   mytheme+
-#   xlab("log10(mean expression)")+
-#   ylab("log2FC")+
-#   ggtitle(paste(shRNA, "RPFs"), subtitle = paste("p-value thr", padj_thr,"\nlog2FC thr +/-", log2FC_thr, "\napeglm shrinking")) -> RPFs_MA
-# 
-# pdf(file = paste0(plot_dir, paste0("RPFs_", shRNA, "_NTCcorrected_MA_fixedlimitswGrey.pdf")), width = 5, height = 5)
-# print(RPFs_MA)
-# dev.off()
-# 
-# totals |>
-#   dplyr::filter(!(is.na(padj))) |>
-#   mutate(sig = factor(case_when(padj < 0.01 ~ "*",
-#                                 padj >= 0.01 ~ "NS"))) |>
-#   ggplot(aes(x = log10(baseMean), y = log2FoldChange, colour = sig))+
-#   geom_point(alpha = 0.5)+
-#   mytheme+
-#   xlab("log10(mean expression)")+
-#   ylab("log2FC")+
-#   ggtitle(paste(shRNA, "Totals"), subtitle = paste("p-value thr", padj_thr,"\nlog2FC thr +/-", log2FC_thr, "\napeglm shrinking")) -> totals_MA
-# 
-# pdf(file = paste0(plot_dir, paste0("Totals_", shRNA, "_NTCcorrected_MA_fixedlimitswGrey.pdf")), width = 5, height = 5)
-# print(totals_MA)
-# dev.off()
 
 ## merge RPF with totals data----
 RPFs |>
