@@ -14,14 +14,14 @@ library(ggrepel)
 treatment <- 'plus'
 
 # directories
-parent_dir <- '~/data/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/AAA_Riboseq/Analysis/Ribo-seq-allreps'
+parent_dir <- 'your/home/folder' # where all data is stored, same parent_dir as used in the shell scripts
 
 plot_dir <- paste0(parent_dir,"/plots/PDF_for_paper/")
 tables_dir <- paste0(parent_dir,"/Analysis/Tables_for_paper/")
 
 #read in gene to transcript IDs map and rename and select ENSTM and ENSGM columns----
 #this is used by DESeq2 and needs to be in this structure
-tx2gene <- read_tsv(file = "~/data/R11/bioinformatics_resources/FASTAs/human/GENCODE/v38/transcript_info/gencode.v38.pc_transcripts_gene_IDs.txt", col_names = F)
+tx2gene <- read_tsv(file = "~/FASTAs/human/GENCODE/v38/transcript_info/gencode.v38.pc_transcripts_gene_IDs.txt", col_names = F)
 tx2gene %>%
   dplyr::rename(GENEID = X1,
                 TXNAME = X2) %>%
