@@ -34,14 +34,8 @@ violin_theme <- theme_bw()+
 
 source("common_variables.R")
 
-# From Mac parent directory
-# parent_dir <- '/Volumes/data-1/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/AAA_Riboseq/Analysis/Ribo-seq-allreps'
-
 # FASTA directory
-# Mac via VPN
-#fasta_dir <- ("/Volumes/data-1/R11/bioinformatics_resources/FASTAs/human/GENCODE/v38/filtered/spliced")
-# VM via termius
-fasta_dir <- ("~/data/R11/bioinformatics_resources/FASTAs/human/GENCODE/v38/filtered/spliced")
+fasta_dir <- ("your/fasta/folder")
 
 # directories for saving
 plot_dir <- paste0(parent_dir,"/plots/PDF_for_paper/")
