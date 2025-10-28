@@ -12,7 +12,7 @@ library(ashr)
 treatment <- 'plus'
 
 # directories
-parent_dir <- '~/data/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/AAA_Riboseq/Analysis/Ribo-seq-allreps'
+parent_dir <- 'your/home/folder' # where all data is stored, same parent_dir as used in the shell scripts
 
 plot_dir <- paste0(parent_dir,"/plots/PDF_for_paper/")
 tables_dir <- paste0(parent_dir,"/Analysis/Tables_for_paper/")
