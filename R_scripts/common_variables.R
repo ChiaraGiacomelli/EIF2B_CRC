@@ -1,12 +1,8 @@
 # Set the parent directory (this should be the same directory as is set in the CV_foureps.sh script
 
 # from VM
-parent_dir <- '~/data/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/AAA_Riboseq/Analysis/Ribo-seq-allreps'
-# Windows desktop in lab
-#parent_dir <- 'N:/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/AAA_Riboseq/Analysis/Ribo-seq-allreps'
-# Mac parent directory
-#parent_dir <- '/Volumes/data-1/CGIACOME/AAA_eIF2B/AAA_Collaborative_stuff/Wurzburg_collab/AAA_Riboseq/Analysis/Ribo-seq-allreps'
-#setwd(paste0(parent_dir, "/R_scripts"))
+parent_dir <- 'your/home/folder' # where all data is stored, same parent_dir as used in the shell scripts
+setwd(paste0(parent_dir, "/R_scripts"))
 plot_dir <- paste0(parent_dir,"/plots/PDF_for_paper/")
 tables_dir <- paste0(parent_dir,"/Analysis/tables_for_paper")
 
